@@ -1,0 +1,90 @@
+<html>
+    <style>
+        body {
+            height: 275px;
+            width: 250px;
+        }
+        .colorStrip {
+            align-self: center;
+            width: 260px; height: 40px;
+            border-style: solid;
+            border-color: red;
+            background-color: red;
+            margin-left: -8px;
+            margin-top: -8px;
+            padding-top: 10px;
+        }
+        .pageContent {
+            display: none;
+        }
+        .menuButton {
+            background-color: red;
+            width: 200px;
+            height: 50px;
+            color: white;
+            font-size: 14pt;
+            border-radius: 5px;
+            outline: none;
+        }
+        .menuButton2 {
+            background-color: transparent;
+            border: transparent;
+            width: 200px;
+            height: 50px;
+            color: red;
+            font-size: 14pt;
+            font-weight: bold;
+            outline: none;
+            margin-top:15px;
+        }
+        .menuInput {
+            height: 60px;
+            width: 175px;
+            font-size: 26pt;
+            text-align: center;
+            text-transform: uppercase;
+            border: none;
+            border-bottom: 2px solid gray;
+            outline: none;
+        }
+        .idLabel {
+            display: inline-block;
+            color: black;
+            font-size: 26pt;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+        input:focus::placeholder {
+            color: transparent;
+        }
+
+    </style>
+    
+    <!-- Tab content -->
+    <h1 class="colorStrip" style="font-weight:bold;color:white;text-align:center">YouTube Sync</h1>
+    <div id="homePage" class="pageContent">
+        <div style="text-align: center;">
+            <input class="menuInput" type="text" id="roomId" maxlength="6" placeholder="Room ID">
+            <button class="menuButton" id="joinParty" style="margin-top:10px;">Join Party</button>
+            <button class="menuButton2" id="createParty">Create Party</button>
+        </div>
+    </div>
+    
+    <div id="joinPage" class="pageContent">
+        <div style="text-align: center;">
+            <label id="roomIdLabelJ" class="idLabel"></label>
+            <input id="copyButtonJ" style="width:35px;height:35px;padding-left:5px;margin-bottom:-5px;outline: none;" type="image" src="images/copy_image.png">
+            <button class="menuButton" id="syncVideo" style="margin-top: 19px;">Sync</button>
+            <button class="menuButton2" id="leavePartyJ" style="margin-top: 10px;">Leave Party</button>
+        </div>
+    </div>
+    
+    <div id="createPage" class="pageContent">
+        <div style="text-align: center;">
+            <label id="roomIdLabelC" class="idLabel"></label>
+            <input id="copyButtonC" style="width:35px;height:35px;padding-left:5px;margin-bottom:-5px;outline: none;" type="image" src="images/copy_image.png">
+            <button class="menuButton" id="leavePartyC" style="margin-top: 19px;">Leave Party</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</html>
